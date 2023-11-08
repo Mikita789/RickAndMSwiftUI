@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382937032AFBA7290028242C /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382937022AFBA7290028242C /* NewCell.swift */; };
+		382937052AFBBCF10028242C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382937042AFBBCF10028242C /* DetailsViewModel.swift */; };
 		38490AA52AF3E2E400F86285 /* RickAndMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38490AA42AF3E2E400F86285 /* RickAndMApp.swift */; };
 		38490AA72AF3E2E400F86285 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38490AA62AF3E2E400F86285 /* CharactersView.swift */; };
 		38490AA92AF3E2E600F86285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38490AA82AF3E2E600F86285 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382937022AFBA7290028242C /* NewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
+		382937042AFBBCF10028242C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		38490AA12AF3E2E400F86285 /* RickAndM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38490AA42AF3E2E400F86285 /* RickAndMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMApp.swift; sourceTree = "<group>"; };
 		38490AA62AF3E2E400F86285 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				38490AB82AF511B900F86285 /* TableCellPrototype.swift */,
 				38490AA62AF3E2E400F86285 /* CharactersView.swift */,
 				38490ABC2AF5284400F86285 /* CharactersViewModel.swift */,
+				382937022AFBA7290028242C /* NewCell.swift */,
 			);
 			path = CharactersView;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				38490ABA2AF514A200F86285 /* DetailsView.swift */,
+				382937042AFBBCF10028242C /* DetailsViewModel.swift */,
 			);
 			path = DetailsView;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 				38490AA72AF3E2E400F86285 /* CharactersView.swift in Sources */,
 				38490AA52AF3E2E400F86285 /* RickAndMApp.swift in Sources */,
 				38490AB52AF3E3A600F86285 /* NetwDataModel.swift in Sources */,
+				382937052AFBBCF10028242C /* DetailsViewModel.swift in Sources */,
+				382937032AFBA7290028242C /* NewCell.swift in Sources */,
 				38490AB72AF3E3AF00F86285 /* AppDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

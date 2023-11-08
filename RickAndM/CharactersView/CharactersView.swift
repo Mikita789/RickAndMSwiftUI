@@ -20,9 +20,12 @@ struct CharactersView: View {
                         NavigationLink {
                             DetailsView(item: item)
                         } label: {
-                            TableCellPrototype(item: item)
+                            //TableCellPrototype(item: item)
+                            NewCell(item: item)
                         }
                     }
+                    .frame(maxWidth: .infinity)
+
                 }
                 
                 Spacer()
@@ -36,7 +39,18 @@ struct CharactersView: View {
             .padding()
             .listStyle(.plain)
             .navigationTitle("Rick And Morty")
+            .toolbar {
+                Button(action: {
+                    Task{
+                        try await model.firstLoadCharacters()
+                    }
+                }, label: {
+                    Image(systemName: "gobackward")
+                        .foregroundStyle(.black)
+                })
+            }
         }
+        
     }
 }
 

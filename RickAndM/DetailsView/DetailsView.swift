@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailsView: View {
     var item: CharacterModel
+    let model = DetailsViewModel()
+    
     var body: some View {
         VStack {
             ZStack(alignment : .bottom){
@@ -19,7 +21,7 @@ struct DetailsView: View {
                 }
                 .clipShape(Circle())
                     .frame(width: 300, height: 300)
-                    .shadow(color: statusLife(), radius: 20)
+                    .shadow(color: model.statusLife(item.status), radius: 30)
                 
                 Text(item.name)
                     .font(.title)
@@ -31,17 +33,6 @@ struct DetailsView: View {
             }
             Spacer()
             
-        }
-    }
-    
-    private func statusLife()->Color{
-        
-        if item.status == "Alive"{
-            return Color.green
-        }else if item.status == "Dead"{
-            return Color.red
-        }else{
-            return Color.yellow
         }
     }
 }

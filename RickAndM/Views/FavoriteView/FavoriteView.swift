@@ -30,10 +30,8 @@ struct FavoriteView: View {
             })
         }
         .listStyle(.plain)
-        .sheet(isPresented: $isShowDetails, content: {
-            if let currentItem = self.currentItem{
-                DetailsView(item: transfer(item: currentItem))
-            }
+        .sheet(item: $currentItem, content: { item in
+            DetailsView(item: transfer(item: item))
         })
     }
     

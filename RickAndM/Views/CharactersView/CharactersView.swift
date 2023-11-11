@@ -27,11 +27,9 @@ struct CharactersView: View {
                     }
                     .frame(maxWidth: .infinity)
                 }
-                .sheet(isPresented: $isShowDetails, content: {
-                    if let currentItem  = self.currentItem{
-                        DetailsView(item: currentItem)
-                    }
-                })
+                .sheet(item: $currentItem) { item in
+                    DetailsView(item: item)
+                }
                 
                 Spacer()
             }

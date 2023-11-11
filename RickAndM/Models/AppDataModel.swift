@@ -11,7 +11,7 @@ struct CharactersArrayModel{
     let result: [CharacterModel]
 }
 
-struct CharacterModel:CharactersProtocol{
+struct CharacterModel:Identifiable{
     var id: Int
     var name: String
     var status: String

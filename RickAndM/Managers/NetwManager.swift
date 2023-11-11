@@ -63,7 +63,6 @@ struct NetwManager{
             return str
         }
         
-        print("https://rickandmortyapi.com/api/character/\(idStr)")
         guard let url = URL(string: "https://rickandmortyapi.com/api/character/\(idStr)")  else {
             
             throw NetwMErrors.badURL }

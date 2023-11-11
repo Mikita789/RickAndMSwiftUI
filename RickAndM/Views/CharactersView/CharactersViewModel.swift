@@ -11,10 +11,10 @@ import Foundation
 class CharactersViewModel: ObservableObject{
     @Published var chrArr:[CharacterModel] = []
     
-    func firstLoadCharacters() async throws {
+    @MainActor func firstLoadCharacters() async throws {
         self.chrArr = try await NetwManager.shared.fetchStartData(type: .charactrers)
     }
-    func searchCharacters(name: String)async throws{
+    @MainActor func searchCharacters(name: String)async throws{
         self.chrArr = try await NetwManager.shared.fetchData(type: .charactrers, param: name)
     }
     

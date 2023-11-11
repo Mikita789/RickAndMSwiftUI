@@ -11,15 +11,15 @@ struct CharactersArrayModel{
     let result: [CharacterModel]
 }
 
-struct CharacterModel{
-    let id: Int
-    let name: String
-    let status: String
-    let species: String
-    let type: String
-    let gender: String
-    let origin, location: LocationCh
-    let image: String
+struct CharacterModel:CharactersProtocol{
+    var id: Int
+    var name: String
+    var status: String
+    var species: String
+    var type: String
+    var gender: String
+    var origin, location: LocationCh
+    var image: String
     
     init(item: Result){
         self.id = item.id
@@ -32,6 +32,19 @@ struct CharacterModel{
         self.location = LocationCh(name: item.origin.name, url: item.origin.url)
         self.image = item.image
     }
+    
+    init(dataItem: CharacterDataModel){
+        self.id = Int(dataItem.id)
+        self.name = dataItem.name ?? "-"
+        self.status = dataItem.status ?? "-"
+        self.species = dataItem.species ?? "-"
+        self.type = dataItem.type ?? "-"
+        self.gender = dataItem.gender ?? "-"
+        self.origin = LocationCh(name: "", url: "")
+        self.location = LocationCh(name: "", url: "")
+        self.image = dataItem.image ?? "-"
+    }
+    
 }
 
 

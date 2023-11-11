@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 class DetailsViewModel: ObservableObject{
     
@@ -20,5 +21,9 @@ class DetailsViewModel: ObservableObject{
         }else{
             return Color.yellow
         }
+    }
+    
+    func saveFavoriteObj(item: CharacterModel){
+        let application = UIApplication.shared.delegate as? UIApplicationDelegate
     }
 }

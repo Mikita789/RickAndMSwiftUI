@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct RickAndMApp: App {
+    @ObservedObject private var persistCont = DataManager()
+    
+    
     var body: some Scene {
         WindowGroup {
             CharactersView()
+                .environment(\.managedObjectContext, persistCont.container.viewContext)
         }
     }
 }
